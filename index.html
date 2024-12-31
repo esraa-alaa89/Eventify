@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management App</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1>Event Management App</h1>
+    </header>
+    <main>
+        <section id="createEventSection">
+            <h2>Create Event</h2>
+            <form id="createEventForm">
+                <input type="text" id="eventName" placeholder="Event Name" required>
+                <input type="date" id="eventDate" required>
+                <input type="time" id="eventTime" required>
+                <input type="text" id="eventLocation" placeholder="Event Location" required>
+                <button class="addEvent" type="submit">Add Event</button>
+            </form>
+        </section>
+        <section id="eventListSection">
+            <h2>Event List</h2>
+            <div id="eventList"></div>
+        </section>
+    </main>
+    <div id="editOverlay" class="hidden">
+        <div class="edit-form">
+            <button id="closeOverlay" class="close-btn">X</button>
+            <h2>Edit Event</h2>
+            <input type="text" id="editEventName" required>
+            <input type="date" id="editEventDate" required>
+            <input type="time" id="editEventTime" required>
+            <input type="text" id="editEventLocation" required>
+            <button id="saveEdit">Save Changes</button>
+        </div>
+        
+    </div>
+    <script src="index.js" defer></script>
+</body>
+</html>
+
+
